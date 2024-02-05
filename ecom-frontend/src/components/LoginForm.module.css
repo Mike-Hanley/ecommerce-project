@@ -1,0 +1,92 @@
+form {
+    margin: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.registerBtn {
+  margin: 0 0 44px 0;
+}
+
+@media only screen and (min-width: 590px){
+    .loginPage {
+      min-height: 700px;
+  }
+  }
+
+  @media only screen and (min-width: 590px){
+    .pageContent {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+}
+  }
+
+  @media only screen and (min-width: 590px){
+    .pageWidth {
+    padding: 0 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+  }
+
+  .grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: -25px;
+    
+  }
+
+  @media only screen and (min-width: 590px){
+    .gridItem {
+        width: 33.33333%;
+        left: 33.33333%;
+        position: relative;
+      }
+}
+
+.customerLoginForm input[type=submit] {
+    cursor: pointer;
+    width: 100%;
+    padding: 11px 40px;
+    font-size: 16px;
+}
+  
+
+
+  .customerLoginForm .btn {
+    display: inline-block;
+    background: #143a47;
+    color:white;
+    font-weight: 600;
+  }
+
+  .headerTitle {
+    letter-spacing: 0.0em; 
+    font-weight: 600;
+  }
+
+  .sectionHeader {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .customerLoginForm {
+    margin-bottom: 20px;
+  }
+
+  .customerLoginForm input {
+    display: block;
+    margin-bottom: 30px;
+    width: 100%;
+    border: 1px solid;
+    border-color: #e9e3db;
+  }
+
+  label[for] {
+    cursor: pointer;
+}
