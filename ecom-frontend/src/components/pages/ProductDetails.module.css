@@ -1,0 +1,389 @@
+:root {
+}
+
+.pageWidth {
+  max-width: 1090px;
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+.pad {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.link {
+  text-decoration: none;
+  color: #2c6ecb;
+  font-size: 18px;
+}
+
+.content {
+  min-height: calc(100vh - 50px);
+}
+
+@media screen and (min-width: 1200px) {
+  .pageWidth {
+    padding: 0 55px;
+  }
+}
+
+.pageWidth {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px 22px 0px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .gridCols2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+.productCurImage {
+  background: white;
+  min-height: 530px;
+}
+
+.gap3 {
+  gap: 3rem;
+}
+
+.gap1 {
+  gap: 0rem;
+}
+
+.gridCols1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.gridCols4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid {
+  display: grid;
+}
+
+.itemsCenter {
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flexCol {
+  flex-direction: column;
+}
+
+.mt2 {
+  margin-top: 2rem;
+}
+
+.productSingleName {
+  text-transform: capitalize;
+  color: #3a3a3a;
+}
+
+.listDisc {
+  list-style-type: disc;
+}
+
+.listInside {
+  list-style-position: inside;
+}
+
+menu,
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.textTextSubdued {
+  color: #737373;
+}
+
+.gap05 {
+  gap: 0.5rem;
+}
+.justifyStart {
+  justify-content: flex-start;
+}
+.flexWrap {
+  flex-wrap: wrap;
+}
+
+.variantOptionList li {
+  border: 1px solid var(--divider);
+  border-radius: 2px;
+  background-color: #fff;
+  font-size: 12px;
+}
+
+@media (min-width: 768px) {
+  .mt3 {
+    margin-top: 3rem;
+  }
+}
+
+.shoeSizeTextContainer {
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
+
+.shoeSize {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+}
+
+.buttonLabels {
+  border: 1px solid var(--gl-color-grey-100);
+  border-left: none;
+  margin-bottom: -1px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  line-height: 1em;
+  font-size: var(--gl-link-font-set-size-functional-1);
+  cursor: pointer;
+  width: auto;
+  color: rgb(17, 17, 17);
+  background: rgb(255, 255, 255);
+}
+
+.buttonSize {
+  height: 48px;
+  border-radius: 0px;
+  box-shadow: rgb(229, 229, 229) 0px 0px 0px 1px;
+}
+
+.buttonLabels:hover {
+  background-color: black;
+  color: white;
+}
+
+.productDetailsSide {
+  width: 600px;
+  padding: 0px 0 0 0px;
+  min-height: 80vh;
+}
+
+.productCategoryText {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 6px;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+@media (min-width: 768px) and (max-width: 2100px) {
+  body .h1,
+  body h1 {
+    font-size: 33px;
+    font-weight: 500;
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    line-height: 44.1px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 2100px) {
+  body .h4,
+  body h4 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30.45px;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.shoeSizeText {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+}
+
+.productDescriptionText {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  padding-top: 15px;
+}
+
+.cartPopupContinue {
+  text-decoration-line: underline;
+  text-align: center;
+}
+
+.cartTitleText {
+  color: rgb(58, 58, 58);
+  font-size: 14px;
+  align-self: center;
+}
+
+.closeButton {
+  background: white;
+}
+
+.toastMiniCart {
+  padding: 1rem;
+  display: grid;
+}
+
+.topHead {
+  grid-template-columns: 4fr 1fr;
+  display: grid;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e1e3e5;
+  margin-bottom: 1rem;
+}
+
+.closeIcon {
+}
+
+.closeIcon button {
+  background-color: #ffffff;
+  align-self: center;
+  justify-content: flex-end;
+  display: flex;
+  border: none;
+  cursor: pointer;
+  margin-left: 42%;
+}
+
+.closeIcon svg {
+  width: 1.4em;
+  height: 1.4em;
+  display: block;
+  color: rgb(77, 75, 75);
+  vertical-align: middle;
+}
+
+.toastParent {
+  border: 1px solid #000;
+}
+
+.imgCart {
+  width: 48px;
+  height: 48px;
+}
+
+.productImgContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.cartProductText {
+  font-weight: 700;
+  color: rgb(58, 58, 58);
+}
+
+.addToCartContainer {
+  display: grid;
+  grid-template-columns: min-content auto;
+  align-items: center;
+}
+
+.addToCartButton:hover {
+  border-color: #3a3a3a;
+  background-color: #3a3a3a;
+}
+
+.addToCartButton {
+  width: 320px;
+  text-decoration-color: rgb(255, 255, 255);
+  min-height: 58px;
+  max-height: 66px;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 30px;
+  background-color: rgb(17, 17, 17);
+  cursor: pointer;
+  border-color: black;
+  border: 1px solid black;
+}
+
+.addToCartButtonLabel {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 24px;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  text-align: center;
+}
+
+.quantityInputContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 18px;
+}
+
+.quantityInputContainer p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-right: 9px;
+}
+
+.inputContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.quantityInput {
+  width: 2.7rem;
+  height: 2.7rem;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.quantityInput::-webkit-outer-spin-button,
+.quantityInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quantityModifierLeft,
+.quantityModifierRight {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  color: #444;
+}
+
+.quantityModifierRight {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-left: -33%;
+}
+
+.quantityModifierLeft {
+  font-size: 1.1rem;
+  font-weight: 550;
+}
+
+.quantityModifierLeft:hover,
+.quantityModifierRight:hover {
+  color: #000;
+}

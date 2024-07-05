@@ -1,6 +1,7 @@
 package com.lightningtasks.ecommercebackend.model;
 import jakarta.persistence.*;
 
+import java.util.Base64;
 import java.util.Set;
 
 @Entity
@@ -23,6 +24,10 @@ public class Product {
     @Column
     private String imageUrl;
 
+    
+    @Column
+    private byte[] imageData;
+
     @Column
     private String category;
 
@@ -31,6 +36,9 @@ public class Product {
 
     @ManyToMany(mappedBy = "products")
     private Set<Order> orders;
+
+    // Convert byte[] to Base64 encoded string
+   /* String base64Image = Base64.getEncoder().encodeToString(imageData);*/ 
 
     // Getters and setters
     public Long getId() {
@@ -73,6 +81,25 @@ public class Product {
         this.imageUrl = imageUrl;
     }
 
+    public byte[] getImage() {
+        return imageData;
+    }
+
+    public void setImage(byte[] imageData) {
+        this.imageData = imageData;
+    }
+/* 
+    public String getBase64Image() {
+        if (base64Image == null) {
+            base64Image = Base64.getEncoder().encodeToString(imageData);
+        }
+        return base64Image;
+    }
+    
+    public void setBase64Image(String base64Image) {
+        this.base64Image = base64Image;
+    }
+*/
     public String getCategory() {
         return category;
     }

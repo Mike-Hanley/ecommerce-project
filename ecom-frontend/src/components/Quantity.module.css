@@ -1,0 +1,56 @@
+.quantityInputContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 18px;
+}
+
+.quantityInputContainer p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-right: 9px;
+}
+
+.inputContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.quantityInput {
+  width: 2.7rem;
+  height: 2.7rem;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.quantityModifierLeft,
+.quantityModifierRight {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  color: #444;
+}
+
+.quantityModifierRight {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-left: -33%;
+}
+
+.quantityModifierLeft {
+  font-size: 1.1rem;
+  font-weight: 550;
+}
+
+.quantityModifierLeft:hover,
+.quantityModifierRight:hover {
+  color: #000;
+}

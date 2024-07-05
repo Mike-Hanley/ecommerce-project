@@ -1,90 +1,78 @@
 .cart {
-    opacity: 0;  /* Initial opacity */
-    visibility: hidden;
-    display: block;
-    position: fixed;
-    width: 440px;
-    background: white;
-    right: 0;
-    top: 0;  /* Set the starting position to the top */
-    z-index: 999;  /* This will keep the cart on top of the overlay */
-    height: 100vh;  /* Set the height to 100% of the viewport height */
-    pointer-events: all;
-    transform: translateX(100%);  /* push the cart off the right edge of the screen */
-    transition: transform 0.4s ease-out, opacity 0.4s ease-out, visibility 0.4s ease-out; /* smooth transition for sliding in */
+  opacity: 0; /* Initial opacity */
+  visibility: hidden;
+  display: block;
+  position: fixed;
+  width: 440px;
+  background: white;
+  right: 0;
+  top: 0; /* Set the starting position to the top */
+  z-index: 99999; /* This will keep the cart on top of the overlay */
+  height: 100vh; /* Set the height to 100% of the viewport height */
+  pointer-events: all;
+  transform: translateX(
+    100%
+  ); /* push the cart off the right edge of the screen */
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out,
+    visibility 0.4s ease-out; /* smooth transition for sliding in */
+  box-shadow: 0 2px 8px #0000000f, 0 3px 12px #00000005;
 }
 
 .cart.active {
-    opacity: 1;
-    transform: translateX(0%);  /* bring the cart back to its natural position */
-    visibility: visible;
-    
+  opacity: 2 !important;
+  transform: translateX(0%); /* bring the cart back to its natural position */
+  visibility: visible;
+  border-left: 1px solid rgb(255, 255, 255);
 }
 
 .overlayOpen {
-    background: rgba(0,0,0,0.5);
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 888;  /* This will keep the overlay behind the cart */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: block;
-    left: 0;
-    transition: left 0s, opacity 0.4s;
-    transition-delay: 0.2s;
-    opacity: 1;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 888; /* This will keep the overlay behind the cart */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  left: 0;
+  transition: left 0s, opacity 0.4s;
+  transition-delay: 0.2s;
+  opacity: 1;
 }
 
 .closeIcon {
-    border: none;
-    width: 30px;
-    height: 30px;
-    border-radius: 0px;
-    background-color: rgb(243, 243, 243);
-    display: flex;               /* Flexbox */
-    align-items: center;         /* Center vertically */
-    justify-content: center;     /* Center horizontally */
-    cursor: pointer;             /* For better UX, show that the button is clickable */
+  border: none;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 0px;
+  background-color: rgb(249, 249, 249);
+  display: flex; /* Flexbox */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  cursor: pointer; /* For better UX, show that the button is clickable */
 }
 
 .closeIcon svg {
-    fill: #55585a;
-    width: 60%;                 /* You can adjust this for the desired size of the SVG */
-    height: 60%;                /* Adjust this too for the height */
+  fill: #55585a;
+  width: 100%; /* You can adjust this for the desired size of the SVG */
+  height: 100%; /* Adjust this too for the height */
 }
-
-.slideCart header {
-    position: sticky;
-    top: 0;
-    background: white;
-    border-bottom: 1px solid #ebebeb;
-    padding: 20px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 
 .slideCart {
-    flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 .empty {
-    text-align: center;
-    margin: auto;
-}
-
-.cartHolder {
-    
+  text-align: center;
+  margin: auto;
 }
 
 .continue {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
 .button {
@@ -96,5 +84,203 @@
   border-radius: 5px;
   margin: 2px 0px;
   cursor: pointer;
-  font-family: Helvetica,Helvetica Neue,Arial,Lucida Grande,sans-serif;
+  font-family: Helvetica, Helvetica Neue, Arial, Lucida Grande, sans-serif;
+}
+
+.slideCart header {
+  position: sticky;
+  top: 0;
+  background: white;
+  border-bottom: 1px solid #9d9d9d;
+  padding: 20px 30px;
+  padding-bottom: 10px;
+}
+
+.topLevel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checkoutButtonContainer {
+  display: flex;
+  justify-content: end;
+}
+
+.checkoutButton {
+  font-size: 11px;
+  height: 20px;
+  background-color: white;
+  color: #0f1111;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px 0 rgba(213, 217, 217, 0.5);
+  cursor: pointer;
+  border: 1px solid black;
+  width: 45%;
+  height: 24px;
+  font-size: 12px;
+  margin-right: 33px;
+}
+
+.checkoutButton:hover {
+  background-color: #f4f4f4;
+  color: rgb(0, 0, 0);
+}
+.clearCartButton {
+  display: block;
+  color: #3a3a3a;
+  font-size: 14px;
+  background-color: #fff;
+  border: none;
+  box-shadow: none;
+  text-align: right;
+  margin-right: -6px;
+  cursor: pointer;
+  text-decoration-line: underline;
+}
+
+.productImgContainer {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  grid-gap: 30px;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.productContainer {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  border-bottom: 1px #9d9d9d solid;
+  border-top: 0;
+  padding-bottom: 10px;
+  padding-top: 20px;
+  height: 110px;
+}
+
+.productTitleContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-left: 30px;
+}
+
+.removeProductContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+}
+.removeProductButton {
+  width: 30px;
+  height: 30px;
+
+  margin-left: 4em;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+}
+
+.removeProductContainer svg {
+  width: 100%;
+}
+
+.quantityInput {
+  background: none;
+  text-align: center;
+  border: 1px solid black;
+  width: 100%;
+  padding: 11px 30px;
+  border-radius: 0;
+  margin: 0 !important;
+}
+
+.quantityInput::-webkit-outer-spin-button,
+.quantityInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quantityModifierLeft,
+.quantityModifierRight {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  color: #444;
+}
+
+.quantityModifierRight {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-left: -33%;
+}
+
+.quantityModifierLeft {
+  font-size: 1.1rem;
+  font-weight: 550;
+}
+
+.quantityModifierLeft:hover,
+.quantityModifierRight:hover {
+  color: #000;
+}
+
+@media screen and (min-width: 768px) {
+  .cartItemsQuantity {
+    grid-area: quantity;
+    display: flex;
+    justify-self: center;
+  }
+}
+
+.quantityButton {
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 12px;
+  top: 0;
+  bottom: 0;
+  border: 0 none;
+  background: none;
+  text-align: center;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  transition: all 0.2s ease-out;
+}
+
+.minus {
+  left: 0;
+}
+
+.plus {
+  right: 0;
+}
+
+.visuallyHidden {
+  border: 0px;
+  clip: rect(0px, 0px, 0px, 0px);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  position: absolute;
+}
+
+.quantityWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 103px;
+  min-width: 75px;
+  overflow: visible;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.productTitle {
+  font-weight: 500;
 }

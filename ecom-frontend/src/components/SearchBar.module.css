@@ -1,56 +1,116 @@
-    .container {
-      width: 100%;
-    /*width: 21rem; */
-   /* position: relative; */
-   
-  }
-  
-  .textbox {
-   /* border: 1px solid #f3f3f3; */
-    height: 78px;
-    outline: none;
-    box-sizing: border-box;
-    /*padding: 1px 10px;*/
-    /*transition: visibility 0.3s cubic-bezier(0, 0, 0.38, 1); */
-    max-width: 1300px;
-    width: 100%;
-    padding: 0 40px;
-  }
-  
-  .textbox:focus {
-    /* We'll change the border color of the textbox as long as it is being focused */
-   /* border: 1px solid blue; */
-  /*  transition: visibility 0.3s cubic-bezier(0, 0, 0.38, 1); */
-  }
-  
-  .suggestions {
-    /* Styles of the suggestions container */
-    overflow-y: scroll;
-   /* border: 1px solid #f3f3f3; */
+.container {
+  width: 100%;
+}
+
+@media screen and (min-width: 230px) and (max-width: 420px) {
+  .container input {
     background-color: white;
-    max-height: 20rem;
-    width: 100%;
-    height: fit-content;
+    color: inherit;
+    border: 1px solid;
+    border-color: white;
+    max-width: 60%;
+    padding: 8px 10px;
+    border-radius: 0;
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 421px) and (max-width: 800px) {
+  .container input {
+    background-color: white;
+    color: inherit;
+    border: 1px solid;
+    border-color: white;
+    max-width: 85%;
+    padding: 8px 10px;
+    border-radius: 0;
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .container input {
+    background-color: white;
+    color: inherit;
+    border: 1px solid;
+    border-color: white;
+    max-width: 96%;
+    padding: 8px 10px;
+    border-radius: 0;
+    font-size: 24px;
+  }
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  -webkit-user-modify: read-write !important;
+  height: 28px;
+}
+
+@media screen and (max-width: 800px) {
+  .clearButton {
+    margin-top: 1.5em;
+    z-index: 99;
     position: absolute;
-    z-index: 10;
-  }
-  
-  .suggestions.hidden {
-    /* Will hide the suggestions */
-    visibility: hidden; /* We can also use opacity: 0 */
-  }
-  
-  .suggestion {
-    /* Styling of a single suggestion */
+    background: none;
+    border: none;
     cursor: pointer;
-    box-sizing: border-box;
-    padding: 1px 10px;
-    height: 2rem;
-    display: flex;
-    align-items: center;
+    font-size: 17px;
+    color: rgb(97, 97, 97);
+    font-weight: 100;
   }
-  
-  .suggestion:hover {
-    /* Changing background color on hover */
-    background-color: #f3f3f3;
+}
+
+@media screen and (min-width: 800px) {
+  .clearButton {
+    margin-top: 1.5em;
+    margin-left: 0;
+    z-index: 99;
+    position: absolute;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    color: rgb(97, 97, 97);
+    font-weight: 100;
   }
+}
+
+.textbox {
+  height: 77px;
+  outline: none;
+  box-sizing: border-box;
+  max-width: 100%;
+  width: 100%;
+  padding: 0 42px;
+}
+
+.suggestions {
+  overflow-y: scroll;
+
+  background-color: white;
+  max-height: 20rem;
+  width: 100%;
+  height: fit-content;
+  position: absolute;
+  z-index: 10;
+}
+
+.suggestions.hidden {
+  /* Will hide the suggestions */
+  visibility: hidden;
+}
+
+.suggestion {
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 1px 10px;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.suggestion:hover {
+  /* Changing background color on hover */
+  background-color: #f3f3f3;
+}

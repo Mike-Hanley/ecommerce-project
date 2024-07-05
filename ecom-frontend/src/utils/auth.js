@@ -1,12 +1,12 @@
 // auth.js
 
-const TOKEN_KEY = 'token';
+const TOKEN_KEY = "token";
 
 export const login = async (username, password) => {
-  const response = await fetch('auth/login', {
-    method: 'POST',
+  const response = await fetch("auth/login", {
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
     body: JSON.stringify({ username, password }),
   });
@@ -16,7 +16,7 @@ export const login = async (username, password) => {
     localStorage.setItem(TOKEN_KEY, data.accessToken);
     return true;
   } else {
-    throw new Error('Invalid username or password');
+    throw new Error("Invalid username or password");
   }
 };
 

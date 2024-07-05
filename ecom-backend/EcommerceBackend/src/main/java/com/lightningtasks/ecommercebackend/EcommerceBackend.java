@@ -11,9 +11,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 
 @SpringBootApplication
-@EnableJpaRepositories("com.lightningtasks.microtasksapp.*")
-@ComponentScan(basePackages = { "com.lightningtasks.microtasksapp.*" })
-@EntityScan("com.lightningtasks.microtasksapp.*")
+@EnableJpaRepositories("com.lightningtasks.ecommercebackend.*")
+@ComponentScan(basePackages = { "com.lightningtasks.ecommercebackend.*" })
+@EntityScan("com.lightningtasks.ecommercebackend.*")
 public class EcommerceBackend {
     public EcommerceBackend() {
         super();

@@ -1,5 +1,5 @@
-import React from 'react';
-import './Pagination.css';
+import React from "react";
+import "./Pagination.css";
 
 /**
  * Returns the pagination list with google logic. Takes in a setPage so the parent
@@ -7,7 +7,12 @@ import './Pagination.css';
  * @param {*} props
  */
 const Pagination = ({
-  itemsPerPage, totalItems, currentPage, setPage, firstProduct, lastProduct
+  itemsPerPage,
+  totalItems,
+  currentPage,
+  setPage,
+  firstProduct,
+  lastProduct,
 }) => {
   const totalPages = Math.ceil(totalItems.length / itemsPerPage);
   const pages = [];
@@ -57,13 +62,15 @@ const Pagination = ({
     }
   };
 
-  return (totalPages !== 0
-    && (
+  return (
+    totalPages !== 0 && (
       <nav className="m-3 mb-4">
         <div className="d-flex justify-content-center">
           <ul className="pagination">
             {totalPages !== 1 && (
-              <li className={currentPage === 1 ? 'disabled pageNext' : 'pageNext'}>
+              <li
+                className={currentPage === 1 ? "disabled pageNext" : "pageNext"}
+              >
                 <button
                   tabIndex={currentPage === 1 ? -1 : 0}
                   onMouseDown={(event) => unFocus(event)}
@@ -71,12 +78,17 @@ const Pagination = ({
                   className="pageLink"
                   onClick={prevPage}
                 >
-                  {'<'}
+                  {"<"}
                 </button>
               </li>
             )}
             {pages.map((page) => (
-              <li key={page} className={currentPage === page ? 'disabled pageItem active' : 'pageItem'}>
+              <li
+                key={page}
+                className={
+                  currentPage === page ? "disabled pageItem active" : "pageItem"
+                }
+              >
                 <button
                   tabIndex={currentPage === page ? -1 : 0}
                   onMouseDown={(event) => unFocus(event)}
@@ -89,7 +101,11 @@ const Pagination = ({
               </li>
             ))}
             {totalPages !== 1 && (
-              <li className={currentPage === totalPages ? 'disabled pageNext' : 'pageNext'}>
+              <li
+                className={
+                  currentPage === totalPages ? "disabled pageNext" : "pageNext"
+                }
+              >
                 <button
                   tabIndex={currentPage === totalPages ? -1 : 0}
                   onMouseDown={(event) => unFocus(event)}
@@ -97,7 +113,7 @@ const Pagination = ({
                   className="pageLink"
                   onClick={nextPage}
                 >
-                  {'>'}
+                  {">"}
                 </button>
               </li>
             )}
@@ -115,7 +131,8 @@ const Pagination = ({
           </div>
         </div>
       </nav>
-    ));
+    )
+  );
 };
 
 export default Pagination;

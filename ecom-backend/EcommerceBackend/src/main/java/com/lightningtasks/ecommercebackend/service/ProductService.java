@@ -24,6 +24,10 @@ public class ProductService {
         return productRepository.findById(id);
     }
 
+    public Optional<Product> findByTitle(String title) {
+        return productRepository.findByTitle(title);
+    }
+
     public List<Product> findAll() {
         return productRepository.findAll();
     }

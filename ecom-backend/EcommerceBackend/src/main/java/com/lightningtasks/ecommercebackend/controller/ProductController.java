@@ -10,7 +10,7 @@ import com.lightningtasks.ecommercebackend.service.ProductService;
 import java.util.List;
 import java.util.Optional;
 
-@CrossOrigin(origins = "http://localhost:3000", maxAge = 3600)
+@CrossOrigin(origins = "http://217.15.170.145", maxAge = 3600)
 @RestController
 @RequestMapping("/api/products")
 public class ProductController {
@@ -26,6 +26,7 @@ public class ProductController {
     public ResponseEntity<List<Product>> findAll() {
         return ResponseEntity.ok(productService.findAll());
     }
+    
     @CrossOrigin
     @GetMapping("/{id}")
     public ResponseEntity<Optional<Product>> findById(@PathVariable Long id) {
@@ -35,6 +36,16 @@ public class ProductController {
         }
         return ResponseEntity.ok(product);
     }
+    /* 
+    @CrossOrigin
+    @GetMapping("/{title}")
+    public ResponseEntity<Optional<Product>> findByTitle(@PathVariable String title) {
+        Optional<Product> product = productService.findByTitle(title);
+        if (product == null) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(product);
+    }*/
 
     @PutMapping
     public ResponseEntity<Product> update(@RequestBody Product product) {

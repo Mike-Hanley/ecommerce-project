@@ -3,8 +3,8 @@ import { useDebounce } from '../hooks/useDebounce';
 import styles from './SearchBar.module.css';
 
 const SearchBar = ({ fetchData, setResult, suggestionKey }) => {
-  const [value, setValue] = useState(''); //this is the value of the search bar
-  const [suggestions, setSuggestions] = useState([]); // this is where the search suggestions get stored
+  const [value, setValue] = useState('');
+  const [suggestions, setSuggestions] = useState([]);
   const [hideSuggestions, setHideSuggestions] = useState(true);
 
   const findResult = (value) => {
@@ -17,7 +17,6 @@ const SearchBar = ({ fetchData, setResult, suggestionKey }) => {
     async () => {
       try {
         const suggestions = await fetchData(value);
-
         setSuggestions(suggestions || []);
       } catch (error) {
         console.log(error);
@@ -28,7 +27,7 @@ const SearchBar = ({ fetchData, setResult, suggestionKey }) => {
   );
 
   const handleFocus = () => {
-    setHideSuggestions(false)
+    setHideSuggestions(false);
   };
 
   const handleBlur = () => {
@@ -41,9 +40,14 @@ const SearchBar = ({ fetchData, setResult, suggestionKey }) => {
     setValue(e.target.value);
   };
 
+  const handleClearSearch = () => {
+    setValue('');
+   
+  };
+
   return (
     <>
-      <div className={styles['container']}>
+      <div className={styles.container}>
         <input
           onFocus={handleFocus}
           onBlur={handleBlur}
@@ -53,6 +57,11 @@ const SearchBar = ({ fetchData, setResult, suggestionKey }) => {
           value={value}
           onChange={handleSearchInputChange}
         />
+        {value && (
+          <button className={styles.clearButton} onClick={handleClearSearch}>
+            Clear
+          </button>
+        )}
         <div
           className={`${styles.suggestions} ${
             hideSuggestions && styles.hidden

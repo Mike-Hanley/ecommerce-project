@@ -10,7 +10,8 @@ import com.lightningtasks.ecommercebackend.model.Product;
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long> {
     Optional<Product> findById(Long id);
-    List<Product> findByTitle(String title);
+    Optional<Product> findByTitle(String title);
+   // List<Product> findByTitle(String title);
     List<Product> findByCategory(String category);
     List<Product> findByStockQuantityLessThan(Integer quantity);
 }

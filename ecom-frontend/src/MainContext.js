@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState, useEffect, useCallback, useMemo } from 'react';
 
 const MainContext = createContext();
 
@@ -13,7 +13,17 @@ export const MainContextProvider = ({ children }) => {
     const [username, setUsername] = useState('');
     const [showCart, setShowCart] = useState(false);
     const [loading, setLoading] = useState(true);
-    
+    const [item, setItem] = useState(null);
+    const [products, setProducts] = useState([]);
+    const [qty, setQty] = useState(1);
+    const [itemQty, setItemQty] = useState(0);
+    const [checkedItems, setCheckedItems] = useState([]);
+    const [curQty, setCurQty] = useState(0);
+    const [cartItems, setCartItems] = useState(
+      JSON.parse(localStorage.getItem('cartItems')) || []);
+    const [imgData, setImgData] = useState();
+
+    const memoizedCartItems = useMemo(() => cartItems, [cartItems]); 
 
   const signin = (responseUsername) => {
     setIsSignedIn(true);
@@ -56,7 +66,23 @@ export const MainContextProvider = ({ children }) => {
     showCart,
     setShowCart,
     loading, 
-    setLoading
+    setLoading,
+    item,
+    setItem,
+    products,
+    setProducts,
+    qty,
+    setQty,
+    itemQty,
+    setItemQty,
+    cartItems,
+    setCartItems,
+    imgData, 
+    setImgData,
+    checkedItems,
+    setCheckedItems,
+    curQty,
+    setCurQty
   };
 
 
